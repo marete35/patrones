@@ -1,0 +1,27 @@
+	Patron MODELO VISTA CONTROLADOR
+	
+En español Modelo Vista Controlador, este patron permite separar una aplicacion en 3 capas, una forma de organizar y de hacer escalable un 
+proyecto, a continuacion una breve descripcion de cada capa. 
+
+MODELO: Esta capa representa todo lo que tiene que ver con el acceso a datos: guardar, actualizar, obtener datos, ademas todo el codigo de la
+logica de negocio, basicamente son las clases Java y parte de la logica de negocio. 
+
+VISTA: La vista tiene que tener con la presentacion de datos del modelo y lo que ve el usuario, por lo general una vista es la representacion 
+visual de un modelo (POJO o clase JAVA)
+
+Por ejemplo el modelo usuario que es una clase en Java y que tiene como propiedades, nombre y apellido deben pertenecer a una vista en la que 
+el usuario vea esas propiedades. 
+
+CONTROLADOR: El controlador es el encargado de conectar el modelo con las vistas, funciona como puente entre la vista y el modelo, el controlador 
+recibe eventos generados por el usuario desde las vistas y se encarga de direccionar al modelo la peticion respectiva. 
+
+Por ejemplo el usuario quiere ver los clientes con Apellido Alvarez, la peticion va al controlador y el se encarga  de utilizar el modelo
+adecuado y devolver ese modelo a la vista. 
+
+Si te das cuenta en ningun momento interactuan directamente la vista con el modelo, esto tambien mantiene la seguridad en una aplicacion. 
+
+	¿Que gano utilizando este patron?
+	
+Lo importante de este patron es que permite dividir en partes, que de alguna manera son independientes, con lo que si por ejemplo hago algun 
+cambio el modelo no afectaria a la vista o si hay algun cambio seria minimo. 
+
