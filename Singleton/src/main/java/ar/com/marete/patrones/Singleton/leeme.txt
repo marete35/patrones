@@ -1,0 +1,35 @@
+	Introduccion y nombre
+	
+Singleton. Creacional. La idea del patron Singleton es proveer un mecanismo para limitar el numero de instancia
+de una clase. Por lo tanto el mismo objeto es siempre compartido por distintas partes del codigo. Puede ser
+visto como una solucion mas elegante para una variable global porque los datos son abstraidos por detras de
+la interfaz que publica la clase singleton. 
+
+	Intencion
+
+Garantizar que una clase solo tenga una instancia y proporcionar un punto de acceso global a ella.
+
+	Tambien conocido como
+	
+Algunas clases pueden tener una instancia. Una variable global no garantiza que solo se instancia una vez. 
+Se utiliza cuando tiene que haber exactamente una instancia de una clase y deba ser accesible desde un 
+punto de acceso conocido. 
+
+	Solucion
+
+Usaremos este patron cuando: 
+
+	- Debe haber exactamente una instancia de una clase y deba ser accesible a los clientes desde un punto
+	de acceso conocido.
+	- Se requiere de un acceso estandarizado y conocido publicamente. 
+	
+
+	Implementacion
+
+	- Privatizar el constructor 
+	- Definir un metodo llamado getInstance() como estatico
+	- Definir un atributo privado como estatico
+	- Puede ser necesarios operaciones de terminacion (depende de la gestion de memoria de lenguaje)
+	- En ambientes concurrentes es necesario usar mecanismos que garanticen la atomicidad del metodo
+	  getInstance(). En Java esto se puede lograr mediante la sincronizacion de un metodo.
+	
