@@ -1,0 +1,28 @@
+		Strategy Pattern
+
+	Intencion
+
+Encapsula algoritmos en clases, permitiendo que estos sean re-utilizados e intercambiables. En base a un parametro, que puede ser cualquier 
+objeto, permite a una aplicacion decidir en tiempo de ejecucion el algoritmo que debe ejecutar. 
+
+	Motivacion
+
+La esencia de este patron es encapsular algoritmos relacionados que son subclases de una superclase comun, lo que permite la seleccion de
+un algoritmo que varia segun el objeto y tambien le permite la variacion en el tiempo. Esto se define en tiempo de ejecucion.
+Este patron busca desacoplar bifuraciones inmensas con algoritmos dificultosos segun el camino elegido. (EVITA LOS IFS) 
+
+	Solucion
+	
+Este patron debe utilizarse cuando: 
+
+	- Un programa tiene que proporcionar multiples variantes de un algoritmo o comportamiento.
+	- Es posible encapsular las variantes de comportamiento en clases separadas que proporcionan un 
+	  modo consistente de acceder a los comportamientos.
+	- Permite cambiar o agregar algoritmos, independiente de la clase que lo utiliza. 
+	
+	Participantes
+	
+Strategy: declara una interfaz comun a todos los algoritmos soportados.
+StrategyConcreto: Implementa un algoritmo utilizando la interfaz Strategy. Es la representacion de un algoritmo. 
+Context: mantiene una referencia a Strategy y segun las caracteristicas del contexto, optara por una estrategia
+determinada.  
