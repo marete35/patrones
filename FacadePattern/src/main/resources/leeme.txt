@@ -1,0 +1,33 @@
+	Introduccion y Nombre
+	
+Busca simplificar el sistema, desde el punto de vista del cliente.
+
+	Intencion
+	
+Su intencion es proporcionar una interfaz unificada para un conjunto de subsistemas, definiendo una interfaz de nivel mas alto. Esto 
+hace que el sistema sea mas facil de usar. 
+
+	Motivacion
+	
+Este patron busca reducir al minimo la comunicacion y dependencia entre subsistemas. Para ello, utilizaremos una fachada, simplificando la 
+complejidad al cliente. El cliente deberia acceder a un subsistema a traves del Facade. De esta manera, se estructura un entorno de programacion
+mas sencillo, al menos desde el punto de vista del cliente (por eso se llama fachada)
+
+	Cuando utilizarlo
+	
+Sabemos que el Facade busca reducir la complejidad de un sistema. Esto mismo ocurre en ciertos lugares donde tendremos muchas opciones: 
+imaginemos a un banco o edificio publico. Es un lugar donde cada persona hace tramites distintos y, por ende, cada persona se encuentra 
+con complicaciones de distinta indole. Es complicado para las personas que trabajan en dichos lugares, por ello es que tienen un 
+especialista por cada tema. Por ello, es muy raro que el cajero sea la misma persona que gestiona un prestamo hipotecario.
+
+Esta misma complejidad se traspasa para el cliente: cuando entramos a un lugar grande con muchas ventanillas, es posible que hagamos la fila
+en el lugar incorrecto.
+
+¿Como se soluciona este caos? Colocando un mostrador de informacion en la entrada para que todos los clientes vayan directamente al mostrador 
+y alli se va direccionando a las personas al lugar correcto.
+
+A grandes rasgos, se podria decir que el mostrador de informacion cumple un rol similar a un Facade: todos los clientes se dirigen alli y el 
+se encarga de solucionarnos el problema. En realidad, sabe quien es la persona que lo va a solucionar. 
+
+En los proyectos grandes suele ocurrir que se pierde el control de la cantidad de clases y cuando esto ocurre, no es bueno obligar a todos 
+los clientes a conocer los subsistemas. Este caso, es un caso idela para alicar un Facade.  
